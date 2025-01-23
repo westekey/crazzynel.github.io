@@ -1,93 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAINTENANCE EN COURS</title>
-  <style>
-    html { 
-      width: 100%; 
-      height: 100%; 
-    }
-    body { 
-      text-align: center; 
-      margin: 0; 
-      padding: 0; 
-      height: 100%; 
-      color: #fff; 
-      font-family: sans-serif;
-      background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-      background-size: 400% 400%;
-      -webkit-animation: Gradient 15s ease infinite;
-      -moz-animation: Gradient 15s ease infinite;
-      animation: Gradient 15s ease infinite;
-    }
-    .vh { 
-      height: 100%; 
-      align-items: center; 
-      display: flex; 
-    }
-    .vh > div { 
-      width: 100%; 
-      text-align: center; 
-      vertical-align: middle; 
-    }
-    img { 
-      max-width: 100%; 
-    }
-    .wrap {
-      text-align: center;
-    }
-    .wrap h1 {
-      font-size: 30px;
-      font-weight: 700;
-      margin: 0 0 90px;
-    }
-    .wrap h2 {
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 1.6;
-      margin: 0 0 80px;
-    }
-    .icon {
-      margin: 0 auto 30px;
-      width: 80px;
-      height: 80px;
-    }
-    @-webkit-keyframes Gradient {
-      0% {background-position: 0% 50%}
-      50% {background-position: 100% 50%}
-      100% {background-position: 0% 50%}
-    }
-    @-moz-keyframes Gradient {
-      0% {background-position: 0% 50%}
-      50% {background-position: 100% 50%}
-      100% {background-position: 0% 50%}
-    }
-    @keyframes Gradient {
-      0% {background-position: 0% 50%}
-      50% {background-position: 100% 50%}
-      100% {background-position: 0% 50%}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon des Jeux Mathématiques 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="video-styles.css">
+    <script src="script.js" defer></script>
+    <script src="video-script.js" defer></script>
+    <script src="countdown.js" defer></script>
 </head>
 <body>
-  <div class="vh">
-    <div>
-      <div class="wrap">
-        <!-- Icon -->
-        <img class="icon" src="https://i0.wp.com/cyborgbulls.fr/wp-content/uploads/2024/01/logoBtransparent.png?resize=63%2C78&ssl=1" alt="cyborgbulls.fr menu icon">
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="logo_salon.jpeg" alt="Logo du salon">
+                </div>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Programme</a></li>
+                    <li><a href="jeux.html" class="active">Jeux</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="#contact" class="contact-btn">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <img src="copie_affiche.jpg" alt="Affiche du salon" class="hero-image">
+        <div class="hero-content">
+            <h1>Salon des Jeux Mathématiques 2025</h1>
+            <p>22 Mars 2025 de 10h à 18h</p>
+            <div id="countdown" class="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="label">Jours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="label">Heures</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span class="label">Secondes</span>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#program" class="cta-button">Découvrir le programme</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="program" class="program-section">
+            <div class="program-container">
+                <div class="glow-effect"></div>
+                <img src="copie_programme.jpg" alt="Programme du salon des jeux mathématiques" class="program-image">
+                <div class="glow-lines">
+                    <div class="glow-line"></div>
+                    <div class="glow-line"></div>
+                    <div class="glow-line"></div>
+                </div>
+            </div>
+        </section>
         
-        <!-- Content -->
-        <h1>CYBORGBULLS.FR est en maintenance.</h1>
-        <h2>
-          <p>Nous sommes désolés pour le problème causé.<br>Notre site est actuellement en cours de maintenance.<br><br></p>
-          <p>Date de fin de maintenance estimée: 29/12/2024 à 23h30 EST</p>
-        </h2>
-        <p>Merci de votre compréhension.</p>
-        <sub>Vous avez une question ou un problème? Envoyez un mail à <a href="mailto:technique@cyborgbulls.fr">technique@cyborgbulls.fr</a></sub>
-      </div>
+        <section id="partners" class="carousel">
+            <h1 class="title">Ils seront présents au Salon des Mathématiques</h1>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <a href="https://cielebazarambulant.wordpress.com/" target="_blank">
+                            <img src="logos/jeu en colabe/theatre.webp" alt="Compagnie le bazar ambulant">
+                        </a>
+                        <p>La troupe de théâtre : Compagnie le bazar ambulant pour la pièce "Pile Poil l'infini"</p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.facebook.com/lezembouquines/" target="_blank">
+                            <img src="logos/jeu en colabe/lezan.jpg" alt="Club jeux de Lézan">
+                        </a>
+                        <p>Club jeux de Lézan : Ils animeront un Escape Game et un espace jeux de réflexion</p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.lacasajeux.fr/" target="_blank">
+                            <img src="logos/jeu en colabe/casa.png" alt="La Casa Jeux">
+                        </a>
+                        <p>Le magasin La Casa Jeux tiendra un stand avec démonstration de jeux</p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://echiquiergrandales.sportsregions.fr/" target="_blank">
+                            <img src="logos/jeu en colabe/echec.jpg" alt="Club d'échecs d'Alès">
+                        </a>
+                        <p>Club d'échecs d'Alès : organisera un tournoi de Blitz (échecs rapides) et présentera le jeu d'échecs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="videos" class="videos-section">
+            <h2 class="section-title">Nos Vidéos</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls class="video-player" preload="metadata">
+                        <source src="vidéos/v1.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+                <div class="video-wrapper">
+                    <video controls class="video-player" preload="metadata">
+                        <source src="vidéos/v2.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+<footer id="contact" class="footer">
+    <div class="footer-bottom">
+        <h2>LES PARTENAIRES</h2>
     </div>
-  </div>
+    <div class="logo-container">
+        <a href="https://cyborgbulls.fr" target="_blank">
+            <img src="/logos/logoBtransparent.webp" alt="CyborgBulls">
+        </a>
+        <a href="https://www.laregion.fr/" target="_blank">
+            <img src="logos/occitanie.png" alt="La Région">
+        </a>
+        <a href="https://www.gard.fr/" target="_blank">
+            <img src="logos/le gard.jpg" alt="Le Département">
+        </a>
+        <a href="https://www.saintchristollezales.fr/" target="_blank">
+            <img src="logos/saint christole.png" alt="Municipalité de St Christol">
+        </a>
+        <a href="https://www.ac-montpellier.fr/" target="_blank">
+            <img src="logos/logo académie montpeliet.svg" alt="Académie Montpellier">
+        </a>
+        <a href="https://www.canalbd.net/ales-bd/" target="_blank">
+            <img src="logos/ales bd.avif" alt="Alès BD">
+        </a>
+        <a href="https://www.imt-mines-ales.fr/" target="_blank">
+            <img src="logos/imt_mine.png" alt="IMT Mines Alès">
+        </a>
+        <a href="https://www.eurekales.fr/" target="_blank">
+            <img src="logos/eurek_ales.png" alt="Eurék'Alès">
+        </a>
+        <a href="https://cineplanet.fr/" target="_blank">
+            <img src="logos/cinéplanet.png" alt="Cinéplanet Alès">
+        </a>
+        <a href="https://www.top-office.com/top-office-ales_29_magasin.html" target="_blank">
+            <img src="logos/top_office.png" alt="Top office Alès">
+        </a>
+        <a href="https://www.radio-bangarang.fr/" target="_blank">
+            <img src="logos/bangarang.png" alt="Radio Bangarang">
+        </a>
+        <a href="https://jacques-prevert.mon-ent-occitanie.fr/" target="_blank">
+            <img src="logos/logo jaque prévert.png" alt="Lycée Jacques Prévert">
+        </a>
+    </div>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: ce.0301778v@ac-montpellier.fr </p>
+            <p>Tél: 04 66 60 08 50</p>
+        </div>
+        <div class="footer-section">
+            <h3>Localisation</h3>
+            <p>1 pl Lucie Aubrac</p>
+            <p>30380 Saint-Christol-les-Alès</p>
+        </div>
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/lyceejacquesprevert30" class="social-link">Facebook</a>
+                <a href="https://www.instagram.com/lyceeprevert?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    </main>
 </body>
 </html>

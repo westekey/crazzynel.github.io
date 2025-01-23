@@ -1,0 +1,224 @@
+.videos-section {
+    padding: 4rem 2rem;
+    background-color: transparent; /* Enlève le fond bleu */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /* Ajustez si nécessaire */
+}
+
+.videos-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 35%, rgba(0, 255, 255, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 75% 65%, rgba(255, 0, 255, 0.1) 0%, transparent 25%);
+    pointer-events: none;
+}
+
+.videos-section {
+    background-color: transparent; /* Enlève le fond bleu */
+}
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    position: relative;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+.video-section {
+    position: relative;
+    overflow: hidden; /* Pour cacher les débordements */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadrer pour remplir le conteneur */
+    z-index: -1; /* Placer la vidéo derrière le contenu */
+}
+
+.video-content {
+    position: relative; /* Pour que le contenu soit au-dessus de la vidéo */
+    z-index: 1; /* S'assurer que le contenu est au-dessus de la vidéo */
+}
+
+.video-container {
+    display: flex; /* Utiliser flexbox pour aligner les vidéos */
+    justify-content: center; /* Centrer les vidéos horizontalement */
+    align-items: center; /* Aligner les vidéos verticalement */
+}
+
+.video-player {
+    height: 30px; /* Ajuster la hauteur souhaitée */
+    width: 10.5px; /* Largeur inchangée */
+    margin: 10px; /* Ajouter un espacement entre les vidéos */
+    object-fit: cover; /* Recadrer la vidéo pour qu'elle remplisse le conteneur */
+}
+.video-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 1rem;
+}
+
+.video-wrapper:first-child {
+    flex: 0 1 600px;
+    aspect-ratio: 16/9;
+}
+
+.video-wrapper:last-child {
+    flex: 0 1 auto;
+    max-width: 600px;
+    height: auto;
+}
+
+.video-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    background: linear-gradient(45deg, #00f2fe, #4facfe, #00f2fe);
+    z-index: -1;
+    border-radius: 25px;
+    animation: borderGlow 3s linear infinite;
+}
+
+.video-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover {
+    transform: translateY(-15px) rotateX(5deg);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+.video-wrapper:hover::after {
+    opacity: 1;
+}
+
+.video-wrapper:first-child .video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-wrapper:last-child .video-player {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fullscreen-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00f2fe;
+    color: #00f2fe;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+}
+
+.video-wrapper:hover .fullscreen-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fullscreen-btn:hover {
+    background: rgba(0, 242, 254, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-btn {
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                     0 0 30px rgba(0, 255, 255, 0.6);
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1300px) {
+    .video-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .video-wrapper:first-child,
+    .video-wrapper:last-child {
+        width: 100%;
+        max-width: 800px;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-wrapper:first-child,
+    .video-wrapper:last-child {
+        max-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+}

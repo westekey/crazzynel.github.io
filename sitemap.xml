@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Pages principales -->
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/jeux.html</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Ressources CSS et JS -->
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/style.css</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/styles.css</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/script.js</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Images principales -->
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/copie_programme.jpg</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/logo_salon.jpeg</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Vidéos -->
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/vidéos/nos_video_fond.mp4</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/vidéos/v1.mp4</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/vidéos/v2.mp4</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Logos -->
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/logos/logoBtransparent.webp</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://prevert-maths.cyborgbulls.fr/logos/occitanie.png</loc>
+        <lastmod>2025-01-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>

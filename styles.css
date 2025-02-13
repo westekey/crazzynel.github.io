@@ -1287,3 +1287,38 @@ body {
     margin-top: 10px;
     color: #555;
 }
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .event {
+        padding: 0.5rem;
+    }
+
+    ul li {
+        padding: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    .event {
+        padding: 0.5rem;
+    }
+
+    .event h2 {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        padding: 0.25rem;
+    }
+}

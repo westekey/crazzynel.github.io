@@ -1,0 +1,363 @@
+:root {
+    --primary-color: #00a8ff;
+    --secondary-color: #0097e6;
+    --background-dark: #192a56;
+    --text-light: #f5f6fa;
+    --glow-color: #74b9ff;
+    --transition: all 0.3s ease;
+    --primary-color-rgb: 0, 168, 255;
+    --accent-color: #ff69b4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(25, 42, 86, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0, 168, 255, 0.2);
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 50px;
+    transition: var(--transition);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.contact-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-btn:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 0 20px var(--glow-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow logos to wrap to the next line */
+    justify-content: center; /* Center logos horizontally */
+    margin-top: 10px; /* Space above the logo container */
+}
+
+.logo-container a {
+    flex: 1 0 21%; /* Allow four logos per line with some space */
+    margin: 10px; /* Space between logos */
+    display: inline-block; /* Allow for margin to work */
+    max-width: 100px; /* Limit logo size */
+}
+
+.logo-container img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.logo-container img:hover {
+    transform: scale(1.1); /* Scale up on hover for effect */
+}.logo-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow logos to wrap to the next line */
+    justify-content: center; /* Center logos horizontally */
+    margin-top: 10px; /* Space above the logo container */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    padding: 20px; /* Padding around the logos */
+    border-radius: 10px; /* Rounded corners */
+}.logo-container a {
+    flex: 1 0 18%; /* Allow for 5 logos in the first row */
+    margin: 10px; /* Space between logos */
+    display: inline-block; /* Allow for margin to work */
+    max-width: 100px; /* Limit logo size */
+}
+
+@media (max-width: 800px) {
+    .logo-container a {
+        flex: 1 0 22%; /* Adjust for 4 logos in the second row on smaller screens */
+    }
+}
+
+
+.title {
+    align-items: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.carousel {
+    margin: 20px auto;
+    overflow: hidden;
+    width: 90%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    color: #555;
+}
+
+.game-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-card p {
+    color: #64748B;
+    font-size: 0.9rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar {
+    background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.game-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.game-icon {
+    font-size: 2rem;
+}
+
+.blue { background: #DBEAFE; color: #2563EB; }
+.green { background: #DCFCE7; color: #16A34A; }
+.purple { background: #F3E8FF; color: #9333EA; }
+.orange { background: #FFEDD5; color: #EA580C; }
+.pink { background: #FCE7F3; color: #DB2777; }
+.red { background: #FEE2E2; color: #DC2626; }
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-light);
+    padding: 2rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

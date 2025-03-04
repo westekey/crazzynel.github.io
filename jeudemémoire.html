@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeux Mathématiques - Salon 2025</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Salon des Jeux Mathématiques 2025</title>
+    <link rel="stylesheet" href="lesjeux.css">
     <link rel="stylesheet" href="mem.css">
     <script src="games.js" defer></script>
     <script src="mem.js" defer></script>
@@ -16,10 +16,10 @@
     <meta name="description" content="Participez au Salon des Jeux Mathématiques 2025 le 22 mars à Saint-Christol-les-Alès ! Venez découvrir des activités ludiques et enrichissantes autour des mathématiques pour tous les âges.">
     <meta name="keywords" content="Salon des Jeux Mathématiques, mathématiques, jeux, événement, Alès, compétition, échecs, escape game, défis logiques">
     <meta name="theme-color" content="#4CAF50"><!-- Couleur principale du site -->
-    <meta property="og:title" content="Salon des Jeux Mathématiques 2025 - JEUX">
+    <meta property="og:title" content="Salon des Jeux Mathématiques 2025">
     <meta property="og:description" content="Venez découvrir le monde fascinant des mathématiques à travers des jeux et activités ludiques pour toute la famille !">
     <meta property="og:image" content="copie_affiche.jpg">
-    <meta property="og:url" content="https://prevert-maths.cyborgbulls.fr/jeux.html">
+    <meta property="og:url" content="https://prevert-maths.cyborgbulls.fr/jeudemémoire.html">
     <meta property="og:type" content="website">
 
 </head>
@@ -34,11 +34,11 @@
             <div class="nav-center">
                 <ul class="nav-links">
                     <li><a href="https://prevert-maths.cyborgbulls.fr">Programme</a></li>
-                    <li><a href="jeux.html" class="active">Jeux</a></li>
+                    <li><a href="jeu.html" class="active">Jeux</a></li>
                 </ul>
             </div>
             <div class="nav-right">
-                <a href="index.html" class="contact-btn">Contact</a>
+                <a href="https://prevert-maths.cyborgbulls.fr#contact" class="contact-btn">Contact</a>
             </div>
         </div>
     </nav>
@@ -47,64 +47,6 @@
         <section class="math-games-section">
             <h2 class="section-title">Jeux Mathématiques Interactifs</h2>
             <div class="games-grid">
-                <section class="game-section" id="sequence-section">
-                    <h2>Suite Logique</h2>
-                    <div id="sequence-numbers" class="question-area"></div>
-                    <div class="answer-area">
-                        <input type="number" class="game-input" id="sequence-input" disabled>
-                    </div>
-                    <div class="game-footer">
-                        <div class="game-info">
-                            <div class="timer" id="sequence-timer">Temps: 120s</div>
-                            <div class="score">Score: <span id="sequence-score">0</span></div>
-                        </div>
-                        <div class="game-controls">
-                            <button class="game-button" id="sequence-start">Démarrer</button>
-                            <button class="game-button" id="sequence-restart" style="display: none;">Recommencer</button>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="game-section" id="mental-section">
-                    <h2>Calcul Mental</h2>
-                    <div id="mental-question" class="question-area"></div>
-                    <div class="answer-area">
-                        <input type="number" class="game-input" id="mental-input" disabled>
-                    </div>
-                    <div class="game-footer">
-                        <div class="game-info">
-                            <div class="timer" id="mental-timer">Temps: 30s</div>
-                            <div class="score">Score: <span id="mental-score">0</span></div>
-                        </div>
-                        <div class="game-controls">
-                            <button class="game-button" id="mental-start">Démarrer</button>
-                            <button class="game-button" id="mental-restart" style="display: none;">Recommencer</button>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="game-section" id="geometry-section">
-                    <h2>Géométrie</h2>
-                    <canvas id="geometry-canvas" width="300" height="200"></canvas>
-                    <div id="geometry-question" class="question-area"></div>
-                    <div class="answer-area">
-                        <input type="number" class="game-input" id="geometry-input" disabled>
-                    </div>
-                    <div class="game-footer">
-                        <div class="game-info">
-                            <div class="timer" id="geometry-timer">Temps: 120s</div>
-                            <div class="score">Score: <span id="geometry-score">0</span></div>
-                        </div>
-                        <div class="game-controls">
-                            <button class="game-button" id="geometry-start">Démarrer</button>
-                            <button class="game-button" id="geometry-restart" style="display: none;">Recommencer</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-    
-    
     <!-- Section Mémoire -->
     <section class="memory-section">
         <h2>Jeu de Mémoire</h2>
@@ -112,6 +54,7 @@
             <!-- Les cartes de mémoire seront générées ici -->
         </div>
     </section>
+</main>
 
           <div class='board'></div>
           <div class='clone'>
@@ -130,15 +73,13 @@
               </button>
             </div>
           </div>
+    
  
           <footer id="contact" class="footer">
             <div class="footer-bottom">
                 <h2>LES PARTENAIRES</h2>
             </div>
             <div class="logo-container">
-                <a href="https://cyborgbulls.fr" target="_blank">
-                    <img src="/logos/logoBtransparent.webp" alt="CyborgBulls">
-                </a>
                 <a href="https://www.laregion.fr/" target="_blank">
                     <img src="logos/occitanie.png" alt="La Région">
                 </a>
@@ -146,7 +87,7 @@
                     <img src="logos/le gard.jpg" alt="Le Département">
                 </a>
                 <a href="https://www.saintchristollezales.fr/" target="_blank">
-                    <img src="logos/saint christole.png" alt="Municipalité de St Christol">
+                    <img src="logos/st_christol.jpg" alt="Municipalité de St Christol">
                 </a>
                 <a href="https://www.ac-montpellier.fr/" target="_blank">
                     <img src="logos/logo académie montpeliet.svg" alt="Académie Montpellier">
@@ -172,6 +113,25 @@
                 <a href="https://jacques-prevert.mon-ent-occitanie.fr/" target="_blank">
                     <img src="logos/logo jaque prévert.png" alt="Lycée Jacques Prévert">
                 </a>
+                <a href="https://jacques-prevert.mon-ent-occitanie.fr/vie-du-lycee/actualites/logo-cvl-1461053.htm" target="_blank">
+                    <img src="logos/cvl.jpeg" alt="Cvl">
+                </a>
+                <a href="https://museefermat.com/" target="_blank">
+                    <img class="fermat-logo" src="logos/fermat.png" alt="Fermat-Science">
+                </a>
+                <a href="https://www.europe-en-occitanie.eu/" target="_blank">
+                    <img src="logos/europe.jpg" alt="Europe">
+                </a>
+                <a href="https://jacques-prevert.mon-ent-occitanie.fr/vie-du-lycee/actualites/logo-cvl-1461053.htm" target="_blank">
+                    <img src="logos/MDL_LOGO.png" alt="MDL">
+                </a> 
+                <a href="https://lesmathsenscene.fr/" target="_blank">
+                    <img src="logos/mathssalon.png" alt="Mathenscènes">
+                </a> 
+                <a href="https://www.banquepopulaire.fr/sud/" target="_blank">
+                    <img src="logos/banque.jpg" alt="Banque populaire du sud">
+                </a> 
+        
             </div>
             <div class="footer-content">
                 <div class="footer-section">
@@ -192,7 +152,9 @@
                     </div>
                 </div>
             </div>
-            <p style="text-align: center;"> Contacter le webmaster du site cyborgbulls.fr (ou son sous-domaine): <a href="mailto:technique@cyborgbulls.fr">technique@cyborgbulls.fr</a></p>
         </footer>
+            </main>
+    
+        <script src="script.js"></script>
     </body>
-</html>
+    </html>

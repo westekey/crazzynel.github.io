@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #00a8ff;
+    --secondary-color: #0097e6;
+    --background-dark: #192a56;
+    --text-light: #f5f6fa;
+    --glow-color: #74b9ff;
+    --transition: all 0.3s ease;
+    --primary-color-rgb: 0, 168, 255;
+    --accent-color: #ff69b4;
+}
+
+html, body 
+	{margin: 0;
+    padding: 0;
+    height: 100%;
+    }
+
+
+body 
+	{background: linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2)), url("../Images/logo_salon01.jpeg");
+	background-size: cover;
+	}
+
+/* Navigation */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(25, 42, 86, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0, 168, 255, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 50px;
+    transition: var(--transition);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.contact-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-btn:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 0 20px var(--glow-color);
+    transform: translateY(-2px);
+}
+
+header 
+	{background-color: #16417C;
+	width: 100%;
+	margin: 0;
+	}
+
+footer
+	{background-color: #16417C;
+	width: 100%;
+	margin: 0;
+	}
+
+.titre
+	{font-weight : bold;
+	color: white;
+	font-variant: small-caps;
+	}
+
+.resultat
+	{font-weight : bold;
+	color: white;
+	font-variant: small-caps;
+	font-size: 210%;
+	}
+
+section
+	{margin-left: 20px;
+	margin-right: 20px;
+	border-style : groove;
+	border-width : 2px;
+	border-color : navy;
+	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+	box-shadow: 5px 5px 10px dodgerblue; /* x y flou couleur */
+	}
+	
+.section
+	{font-variant: small-caps;
+	color: #16417C;
+	text-align : center;
+	}
+	
+table
+	{width:25%;}
+
+table, td, th
+	{border: dotted 2px blue;
+	border-collapse: collapse;
+	border-spacing: 2px;
+	}
+
+#texte
+	{ text-align : center;
+	font-size : 150%;
+	}
+
+.lien
+	{font-size : 100%;
+	text-align : center;
+	}
+	
+.diff
+	{font-weight : bold;
+	text-align : right;
+	}
+
+.liens
+	{background-color: white;
+	}
+
+h1
+	{font-size: 200%;
+	font-weight : bold;
+	text-align : center;
+	}
+h2
+	{font-size: 200%;
+	text-align : center;
+	}
+	
+ol.niveau1
+	{color : black;
+	list-style-type : decimal;
+	}	
+ol.niveau2
+	{color : black;
+	list-style-type : lower-latin;
+	}
+
+a
+	{color: navy;	
+	}
+
+a:hover
+	{color: blue;
+	}
+
+

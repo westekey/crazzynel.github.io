@@ -1,0 +1,121 @@
+.sudoku-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #00a8ff;
+  }
+  
+  #sudoku-board {
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #00a8ff;
+  }
+  
+  td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    color: #000000;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  td:nth-child(3n) {
+    border-right: 2px solid #00a8ff;
+  }
+  
+  tr:nth-child(3n) td {
+    border-bottom: 2px solid #00a8ff;
+  }
+  
+  td:focus {
+    background-color: rgba(0, 168, 255, 0.1);
+    outline: none;
+  }
+  
+  td.initial {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  td.invalid {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  
+  td:nth-child(3n) {
+    border-right: 2px solid #00a8ff;
+  }
+  
+  tr:nth-child(3n) td {
+    border-bottom: 2px solid #00a8ff;
+  }
+  
+  td:focus {
+    background: rgba(0, 168, 255, 0.2);
+    outline: none;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00a8ff;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #0084ff;
+    transform: translateY(-2px);
+  }
+  
+  #difficulty-selector {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #1f2937;
+    color: white;
+    border: 1px solid #00a8ff;
+  }
+  
+  #timer, #lives-display {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 1rem;
+    color: #00a8ff;
+  }
+  
+  #lives-display {
+    font-weight: bold;
+  }
+  
+  .initial {
+    color: #00a8ff;
+  }
+  
+  .invalid {
+    color: #ff4444;
+  }
+  

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     class MathGame {
         constructor(type) {
+            console.log(`Initializing ${type} game`);
             this.type = type;
             this.score = 0;
             this.isPlaying = false;
@@ -8,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
             this.timer = null;
             this.setupGame();
             // Afficher le message initial
-            this.elements.questionDisplay.textContent = 'Appuyez sur Démarrer';
+            if (this.elements.questionDisplay) {
+                this.elements.questionDisplay.textContent = 'Appuyez sur Démarrer';
+            }
         }
 
         setupGame() {
@@ -23,14 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 canvas: this.type === 'geometry' ? document.getElementById('geometry-canvas') : null
             };
 
-            if (!this.elements.startButton || !this.elements.input) return;
+            console.log(`Elements for ${this.type}:`, this.elements);
+
+            if (!this.elements.startButton || !this.elements.input) {
+                console.log(`Missing required elements for ${this.type}`);
+                return;
+            }
 
             // Désactiver l'input au début
             this.elements.input.disabled = true;
 
             // Configuration des événements
-            this.elements.startButton.addEventListener('click', () => this.startGame());
-            this.elements.restartButton.addEventListener('click', () => this.resetGame());
+            this.elements.startButton.addEventListener('click', () => {
+                console.log(`${this.type} start button clicked`);
+                this.startGame();
+            });
+            
+            this.elements.restartButton.addEventListener('click', () => {
+                console.log(`${this.type} restart button clicked`);
+                this.resetGame();
+            });
+            
             this.elements.input.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter' && this.isPlaying) {
                     this.checkAnswer();
@@ -116,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         getGameTime() {
-            return this.type === 'mental' ? 30 : 120;
+            return 60; // 60 secondes pour tous les jeux
         }
 
         endGame() {
@@ -287,9 +303,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialiser les jeux
-    const games = ['mental', 'sequence', 'geometry'].map(type => new MathGame(type));
+    // Initialiser le jeu approprié selon la page
+    if (document.getElementById('geometry-section')) {
+        console.log('Geometry page detected, initializing game');
+        new MathGame('geometry');
+    } else if (document.getElementById('sequence-section')) {
+        console.log('Sequence page detected, initializing game');
+        new MathGame('sequence');
+    } else if (document.getElementById('mental-section')) {
+        console.log('Mental calculation page detected, initializing game');
+        new MathGame('mental');
+    }
 });
+
 document
   .getElementById("sudoku-board")
   .addEventListener("keyup", function (event) {
@@ -351,3 +377,4 @@ function stringToBoard(string) {
     }
   }
 }
+
